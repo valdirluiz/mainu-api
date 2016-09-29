@@ -2,6 +2,9 @@ package br.com.mainu.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.querydsl.core.annotations.QueryProjection;
+
 import java.util.Date;
 import java.util.List;
 
@@ -84,6 +87,12 @@ public class Estabelecimento implements Serializable {
 
 	@Column(name="estabelecimento_uf")
 	private String estabelecimentoUf;
+	
+	@QueryProjection
+	public Estabelecimento(String estabelecimentoBairro, String estabelecimentoNome){
+		this.estabelecimentoBairro = estabelecimentoBairro;
+		this.estabelecimentoNome = estabelecimentoNome;
+	}
 
 	//bi-directional many-to-one association to AgendarTraducao
 	@OneToMany(mappedBy="estabelecimento")
