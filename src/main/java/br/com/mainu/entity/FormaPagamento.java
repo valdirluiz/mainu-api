@@ -11,7 +11,6 @@ import java.util.Date;
  */
 @Entity
 @Table(name="f_forma_pagamento")
-@NamedQuery(name="FFormaPagamento.findAll", query="SELECT f FROM FFormaPagamento f")
 public class FormaPagamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 

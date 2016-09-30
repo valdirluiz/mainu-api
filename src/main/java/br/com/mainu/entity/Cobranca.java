@@ -11,7 +11,6 @@ import java.util.Date;
  */
 @Entity
 @Table(name="f_cobrancas")
-@NamedQuery(name="FCobranca.findAll", query="SELECT f FROM FCobranca f")
 public class Cobranca implements Serializable {
 	private static final long serialVersionUID = 1L;
 
